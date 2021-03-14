@@ -4,9 +4,18 @@ function iniciar() {
     let pass = '123';
     let nombre = 'Yeila Ardila';
 
-   
-    usuario.addEventListener('keypress', function(ev) {
-        usuario_mostrar.innerHTML = usuario_mostrar.innerHTML + ev.key;
+    usuario.addEventListener('keydown', function(ev) {
+
+
+        if (ev.keyCode != 9 && ev.keyCode != 13 && ev.keyCode != 17 && ev.keyCode != 18 && ev.keyCode != 16 && ev.keyCode != 91 && ev.keyCode != 186) {
+
+            if (ev.keyCode == 8) {
+                usuario_mostrar.innerHTML = usuario_mostrar.innerHTML.slice(0, usuario_mostrar.innerHTML.length - 1);
+            } else {
+                usuario_mostrar.innerHTML = usuario_mostrar.innerHTML + ev.key;
+            }
+        }
+
     }, false)
 
 
