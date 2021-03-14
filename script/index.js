@@ -4,10 +4,21 @@ function iniciar() {
     let pass = '123';
     let nombre = 'Yeila Ardila';
 
+    var hammertime = new Hammer(ingresar);
+    console.log(hammertime);
+    hammertime.on('press', function(ev) {
+        console.log(ev);
+    });
+
+
     usuario.addEventListener('keypress', function(ev) {
         usuario_mostrar.innerHTML = usuario_mostrar.innerHTML + ev.key;
     }, false)
 
+
+    password.addEventListener('keypress', function(ev) {
+        password_mostrar.innerHTML = password_mostrar.innerHTML + ev.key;
+    }, false)
 
     ingresar.addEventListener('click', function(ev) {
 
