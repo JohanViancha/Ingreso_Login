@@ -6,7 +6,7 @@ function iniciar() {
 
     var hammertime = new Hammer(ingresar);
     hammertime.on('pan', function(ev) {
-        console.log(ev);
+        alert(ev);
     });
 
 
